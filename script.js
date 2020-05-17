@@ -9,15 +9,15 @@ function passwordCriteria(){
   var userChoices;
 
   //Length of Password
-  length = parseInt(prompt("How long would you like your password to be?"));
+  length = parseInt(prompt("How long would you like your password to be? (Must be between 8 and 128 characters.)"));
 
   //Validation of length as a num & meets min/max length
   if(isNaN(length)){
-    alert("Password length must a numeric number.");
+    alert("Password length must be a numeric number.");
     return;
   }
 
-  if (length<8 || length>128){
+  if (length<8 || length>129){
     alert("Password must be between 8-128 characters");
     return;
   }
@@ -26,7 +26,7 @@ function passwordCriteria(){
   isLower = confirm("Click ok to include Lowercase letters, cancel to not include.");
   isUpper = confirm("Click ok to include Uppercase letters, cancel to not include.");
   isNumber = confirm("Click ok to include Numeric values, cancel to not include.");
-  isSymbol = confirm("Click to include Special Character, canvel to not include.");
+  isSymbol = confirm("Click to include Special Character, cancel to not include.");
 
   //Console log of variables
   // console.log("isSymbol: " + isSymbol);
@@ -81,19 +81,13 @@ function getRandomSymbol(){
 function generatePassword(){
   var choices;
   var typeCount=0;
-  var newPass=" ";
+  var newPass="";
  
   //collects user criteria
   choices = passwordCriteria();
   var length = choices[4].passLength;
 
   //write if statement to add one to type count.
-  // for (var i = 0; i < (choices.length -1); i++){
-  //   if(choices[i].option === true){
-  //     typeCount++;
-  //   }
-  // }
-
   if (choices[0].lower){
     typeCount++;
   };
@@ -103,12 +97,12 @@ function generatePassword(){
   };
 
   if(choices[2].symbol){
-    typeCount;
-  }
+    typeCount++;
+  };
 
   if(choices[3].number){
-    typeCount;
-  }
+    typeCount++;
+  };
 
 
   const typeArr = [choices[0], choices[1], choices[2], choices[3]].filter(
@@ -121,9 +115,9 @@ function generatePassword(){
 
       newPass += randomFunc[funcName]();
     });
-  }
+  };
   
-  var finalPassword = (newPass.slice(0, length+1));
+  var finalPassword = newPass;
  
   return finalPassword;
   
