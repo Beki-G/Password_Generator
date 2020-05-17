@@ -28,14 +28,7 @@ function passwordCriteria(){
   isNumber = confirm("Click ok to include Numeric values, cancel to not include.");
   isSymbol = confirm("Click to include Special Character, cancel to not include.");
 
-  //Console log of variables
-  // console.log("isSymbol: " + isSymbol);
-  // console.log("isNumber: "+ isNumber);
-  // console.log("isUpper: " + isUpper) ;
-  // console.log("isLower: " + isLower);
-  // console.log("length: " + length);
-
-  //Validation of at least on char type
+  //Validation of at least one char type
   if(isLower === false && isUpper === false && isSymbol === false && isNumber === false){
     alert("Must be at least one type of character");
     return;
@@ -44,9 +37,7 @@ function passwordCriteria(){
   //save choices to nested array/object
   userChoices = [{lower: isLower}, {upper: isUpper}, {symbol: isSymbol}, {number: isNumber}, {passLength: length}];
 
-  //console log to make sure it works
-  //console.log(userChoices);
-
+  //return array 
   return userChoices;
 }
 
@@ -104,23 +95,26 @@ function generatePassword(){
     typeCount++;
   };
 
-
+  //make typeArr contain only true values based from user input
   const typeArr = [choices[0], choices[1], choices[2], choices[3]].filter(
     item => Object.values(item)[0]
   );
 
-  for(var i =0; i<length; i += typeCount){
+  //for loop that creates password
+  for(var i =0; i<=length; i += typeCount){
     typeArr.forEach(type => {
+      //getting the key of the object from typeArr
       const funcName =  Object.keys(type)[0];
-
+      //goes through random funtion generator to get random char and append to growing string
       newPass += randomFunc[funcName]();
     });
   };
   
-  var finalPassword = newPass;
+  //ensures password length is same as user input
+  var finalPassword = newPass.slice(0, length);
  
+  //return generated password
   return finalPassword;
-  
 }
 
 

@@ -4,14 +4,11 @@ Password Generator creates a password through the use of prompts, arrays & objec
 ## Deployment
 Live page at: [https://beki-g.github.io/Password_Generator/](https://beki-g.github.io/Password_Generator/)
 
-> Screenshot of initial landing page
-![Screenshot of initial landing page](./readMe_img/LandingPage.png)
+> Screenshot of initial landing page ![Screenshot of initial landing page](./assets/readMe_img/LandingPage.png)
 
-> Screenshot of user input through the use of prompts
-![Screenshot of user input through the use of prompts](./readMe_img/UserInput.png)
+> Screenshot of user input through the use of prompts ![Screenshot of user input through the use of prompts](./assets/readMe_img/UserInput.png)
 
-> Screenshot of final password after it has been generated
-![Screenshot of final password after it has been generated](./readMe_img/GeneratedPassword.png)
+> Screenshot of final password after it has been generated ![Screenshot of final password after it has been generated](./assets/readMe_img/GeneratedPassword.png)
 
 ## Built with 
 * Javascript
