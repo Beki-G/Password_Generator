@@ -5,13 +5,13 @@ Password Generator creates a password through the use of prompts, arrays & objec
 Live page at: [https://beki-g.github.io/Password_Generator/](https://beki-g.github.io/Password_Generator/)
 
 > Screenshot of initial landing page
-![Screenshot of initial landing page](<blockquote class="imgur-embed-pub" lang="en" data-id="WsGZ958"><a href="//imgur.com/WsGZ958"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
+![Screenshot of initial landing page](./readMe_img/LandingPage.png)
 
 > Screenshot of user input through the use of prompts
-![Screenshot of user input through the use of prompts](https://imgur.com/g5Y0RTi)
+![Screenshot of user input through the use of prompts](./readMe_img/UserInput.png)
 
 > Screenshot of final password after it has been generated
-![Screenshot of final password after it has been generated](https://imgur.com/U3Z7GN0)
+![Screenshot of final password after it has been generated](./readMe_img/GeneratedPassword.png)
 
 ## Built with 
 * Javascript
